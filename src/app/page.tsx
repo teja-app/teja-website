@@ -26,7 +26,7 @@ export default function Home() {
             <Image src={"/logo/color_horizontal.svg"} alt="Teja Logo" width={150} height={50} />
             {/* Navigation Links */}
             <div className={`hidden md:flex space-x-4 ${bodyCss.className}`} >
-              <a href="#" className="text-white font-semibold">About Us</a>
+              <a href="/about" className="text-white font-semibold">About Us</a>
               <a href="#" className="text-white font-semibold">Help</a>
             </div>
           </nav>

@@ -20,20 +20,20 @@ export default function Footer() {
               <div className="text-center md:text-left">
                 <h6 className="font-semibold mb-3">Company</h6>
                 <ul>
-                  <li className="mb-2"><a href="#" className="hover:underline">About Us</a></li>
-                  <li className="mb-2"><a href="#" className="hover:underline">Download</a></li>
-                  <li className="mb-2"><a href="#" className="hover:underline">Blog</a></li>
-                  <li><a href="#" className="hover:underline">Terms & Conditions</a></li>
-                  <li><a href="#" className="hover:underline">Privacy Policy</a></li>
+                  <li className="mb-2"><a href="/about" className="hover:underline">About Us</a></li>
+                  <li className="mb-2"><a href="/download" className="hover:underline">Download</a></li>
+                  <li className="mb-2"><a href="/blog" className="hover:underline">Blog</a></li>
+                  <li><a href="/terms" className="hover:underline">Terms & Conditions</a></li>
+                  <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
                 </ul>
               </div>
               {/* Column 2 */}
               <div className="text-center md:text-left">
                 <h6 className="font-semibold mb-3">Community</h6>
                 <ul>
-                  <li className="mb-2"><a href="#" className="hover:underline">Discord</a></li>
-                  <li className="mb-2"><a href="#" className="hover:underline">Twitter</a></li>
-                  <li><a href="#" className="hover:underline">Instagram</a></li>
+                  <li className="mb-2"><a href="https://discord.gg/hK9yznQD9X" className="hover:underline">Discord</a></li>
+                  <li className="mb-2"><a href="https://twitter.com/app_teja" className="hover:underline">Twitter</a></li>
+                  <li className="mb-2"><a href="https://www.instagram.com/app.teja" className="hover:underline">Instagram</a></li>
                 </ul>
               </div>
               {/* Column 3 */}
