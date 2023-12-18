@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
-import Image from 'next/image';
 import { Lato } from 'next/font/google'
 import './globals.css'
 import Head from 'next/head'
-import { bodyCss } from '@/components/css/fonts';
 
 const lato = Lato({
   subsets: ['latin'],
