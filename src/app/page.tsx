@@ -35,10 +35,10 @@ export default function Home() {
           <div className="flex-grow flex flex-col items-center justify-center text-center p-4">
             <h1 className={`text-6xl text-[#1f6079] font-bold mb-4 ${titleFontCss.className}`}>Peace, On Your Terms</h1>
             <p className="text-xl  text-[#1f6079] mb-8 ${headingFontCss.className}">Everyday Tools for Wellbeing</p>
-            <a href="#" className="bg-black text-white font-semibold text-lg py-4 px-16 rounded-full hover:bg-white hover:text-black transition-colors shadow-lg">
-              Download<br />
+            <a href="https://testflight.apple.com/join/w2vMOLFB" className="bg-black text-white font-semibold text-lg py-4 px-16 rounded-full hover:bg-white hover:text-black transition-colors shadow-lg">
+              Download - Beta<br />
             </a>
-            <span className="text-sm block mt-1">It's free</span>
+            <span className="text-sm block mt-1">It's free, secure and no login required.</span>
           </div>
         </div>
       </div>

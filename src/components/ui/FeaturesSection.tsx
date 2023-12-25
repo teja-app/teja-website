@@ -31,8 +31,8 @@ export default function FeaturesSection() {
                     </p>
 
                     <div className="text-center">
-                        <a href="#" className="bg-black text-white font-semibold text-lg py-4 px-16 rounded-full hover:bg-white hover:text-black transition-colors shadow-lg">
-                            Download<br />
+                        <a href="https://testflight.apple.com/join/w2vMOLFB" className="bg-black text-white font-semibold text-lg py-4 px-16 rounded-full hover:bg-white hover:text-black transition-colors shadow-lg">
+                        Download Beta<br />
                         </a>
                     </div>
                     <div className="mb-20"></div>
