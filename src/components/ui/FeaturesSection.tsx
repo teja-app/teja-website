@@ -1,9 +1,9 @@
 const featuresList = ['Mood Tracking', 'Guided Journal', 'Habit Formation', 'Personal Analysis'];
 export default function FeaturesSection() {
     return (
-        <div className="relative bg-[url('/features_background.svg')] bg-cover bg-center">
+        <div className="relative bg-cover bg-center">
 
-            <div className="relative text-white py-20">
+            <div className="relative py-20">
                 {/* You would set the background image in the parent container of this component */}
                 <div className="container mx-auto">
                     <div className="text-center mb-20">

@@ -2,7 +2,7 @@ import { bodyCss, headingFontCss, titleFontCss } from '@/components/css/fonts';
 
 export default function WhyTejaSection() {
   return (
-    <div className="relative bg-[#1f6079] text-white py-12">
+    <div className="relative py-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className={`text-4xl font-bold mb-3 ${titleFontCss.className}`}>Why Choose Teja?</h2>

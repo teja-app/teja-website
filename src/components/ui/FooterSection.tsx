@@ -1,7 +1,7 @@
 import Image from 'next/image';
 export default function Footer() {
     return (
-      <footer className="bg-[#2F315F] text-white py-20">
+      <footer className="py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo and Name */}
@@ -10,7 +10,7 @@ export default function Footer() {
               <div className="flex items-center justify-center mb-3">
                 {/* Replace div with Image component if you have a logo */}
                 <div className="logo-placeholder mr-2">
-                    <Image src={"/logo/white_vertical.svg"} alt="Teja Logo" width={75} height={86} />
+                    <Image src={"/logo/color_horizontal.svg"} alt="Teja Logo" width={100} height={86} />
                 </div>
               </div>
             </div>
