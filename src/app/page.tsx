@@ -14,7 +14,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <div className="relative bg-white">
+      <div className="relative bg-white text-black">
         {/* Background Image */}
 
         <div className="relative z-10 min-h-screen flex flex-col">
@@ -30,13 +30,13 @@ export default function Home() {
           <HeroSection />
         </div>
       </div>
-      <div className="relative bg-white">
+      <div className="relative bg-white text-black">
         <WhyTejaSection />
       </div>
-      <div className="relative bg-white">
+      <div className="relative bg-white text-black">
         <FeaturesSection />
       </div>
-      <div className="relative bg-white">
+      <div className="relative bg-white text-black">
         <Footer/>
       </div>
     </>
