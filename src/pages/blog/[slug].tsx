@@ -14,10 +14,28 @@ export async function fetchBlogPost(slug: String) {
 
 
 const BlogPost = ({ post }: any) => {
+  const socialImageUrl = post.meta.image.sizes.tablet.url;
+  const postUrl = `https://teja.app/blog/${post.slug}`;
+
   return (
     <article className="mx-auto max-w-5xl prose lg:prose-xl mx-auto px-4 md:px-6 lg:px-8 p-8">
-      <Head>
-        <title>{post.title} | Teja App Blog</title>
+       <Head>
+        <title>{post.meta.title} | Teja App Blog</title>
+        <meta name="description" content={post.meta.description} />
+        <link rel="canonical" href={postUrl} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.meta.title} />
+        <meta property="og:description" content={post.meta.description} />
+        <meta property="og:url" content={postUrl} />
+        <meta property="og:image" content={socialImageUrl} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.meta.title} />
+        <meta name="twitter:description" content={post.meta.description} />
+        <meta name="twitter:image" content={socialImageUrl} />
       </Head>
       {/* Use Next.js Image component for optimized images */}
 
