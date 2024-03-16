@@ -1,8 +1,3 @@
-import { bodyCss } from '@/components/css/fonts';
-import Head from 'next/head';
-import Image from 'next/image';
-
-
 export default function AboutPage() {
   return (
     <>

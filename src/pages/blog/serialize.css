@@ -1,0 +1,116 @@
+/* Example overrides in your stylesheet */
+.no-tailwind-base h1,
+.no-tailwind-base h2,
+.no-tailwind-base h3,
+.no-tailwind-base h4,
+.no-tailwind-base h5,
+.no-tailwind-base h6,
+.no-tailwind-base p,
+.no-tailwind-base ul,
+.no-tailwind-base ol,
+.no-tailwind-base li {
+  /* Override styles here */
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  /* Add more resets or custom styles as needed */
+}
+
+
+.no-tailwind-base h1,
+.no-tailwind-base h2,
+.no-tailwind-base h3,
+.no-tailwind-base h4,
+.no-tailwind-base h5,
+.no-tailwind-base h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; /* Resets the boldness. Use 400 for normal, 700 for bold if needed */
+  font-family: 'Arial', sans-serif; /* Example font. Replace with your preferred font */
+  color: #333; /* Dark gray text color, but choose what fits your design */
+}
+
+.no-tailwind-base h1 {
+  font-size: 1.5em; /* Example size. Adjust as needed */
+  line-height: 1.2;
+}
+
+.no-tailwind-base h2 {
+  font-size: 1.25em;
+  line-height: 1.3;
+}
+
+.no-tailwind-base h3 {
+  font-size: 1.1em;
+  line-height: 1.35;
+}
+
+.no-tailwind-base h4 {
+  font-size: 1.05em;
+  line-height: 1.4;
+}
+
+.no-tailwind-base h5 {
+  font-size: 1em; /* Keeping this the same as the base font size for demonstration */
+  line-height: 1.45;
+}
+
+.no-tailwind-base h6 {
+  font-size: 0.875em; /* Smaller than the base font size */
+  line-height: 1.5;
+}
+
+
+.no-tailwind-base p,
+.no-tailwind-base ul,
+.no-tailwind-base ol {
+  margin: 0 0 1em 0; /* Adds bottom margin for spacing, adjust as needed */
+  padding: 0;
+  font-family: 'Arial', sans-serif; /* Example font, replace as needed */
+  color: #333; /* Example color, adjust to fit your design */
+  line-height: 1.6; /* Example line height for readability */
+}
+
+.no-tailwind-base ul,
+.no-tailwind-base ol {
+  padding-left: 20px; /* Adds padding for list indentations, adjust as needed */
+}
+
+.no-tailwind-base ul li,
+.no-tailwind-base ol li {
+  margin-bottom: 0.5em; /* Adds spacing between list items, adjust as needed */
+}
+
+.no-tailwind-base p {
+  margin-bottom: 1em; /* Ensures spacing after paragraphs, adjust as needed */
+}
+
+
+
+.no-tailwind-base p {
+  margin: 0 0 1em 0; /* Resets the margin and adds bottom margin for spacing */
+  padding: 0;
+  font-family: 'Arial', sans-serif; /* Example font. Replace with your preferred font */
+  color: #333; /* Dark gray, adjust as needed */
+  line-height: 1.6; /* Adjust line height for readability */
+}
+
+.no-tailwind-base ul,
+.no-tailwind-base ol {
+  margin: 0 0 1em 0; /* Adds bottom margin for spacing */
+  padding-left: 20px; /* Adjust padding for list indentation */
+  list-style-position: inside; /* Adjust as needed */
+}
+
+.no-tailwind-base ul {
+  list-style-type: disc; /* Style for unordered lists */
+}
+
+.no-tailwind-base ol {
+  list-style-type: decimal; /* Style for ordered lists */
+}
+
+.no-tailwind-base li {
+  margin-bottom: 0.5em; /* Adds spacing between list items */
+  line-height: 1.6; /* Ensures consistency with paragraph line height */
+}

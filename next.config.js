@@ -1,6 +1,14 @@
 const withMDX = require('@next/mdx')()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'f000.backblazeb2.com',
+      },
+    ],
+  },
     pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
     webpack(config) {
         config.module.rules.push({
