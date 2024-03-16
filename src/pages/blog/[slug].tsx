@@ -44,7 +44,7 @@ const BlogPost = ({ post }: any) => {
         <img
           src={post.featureImage.sizes.tablet.url}
           alt={post.featureImage.alt}
-          className="max-w-lg"
+          className="w-full sm:w-3/4 md:w-1/2 lg:w-1/2 xl:w-1/2 mx-auto"
         />
       </div>
       <p className="">{post.summary}</p>
