@@ -52,14 +52,14 @@ export default function BlogPage({ posts, categories }: InferGetServerSidePropsT
       <h2 className="text-2xl font-bold mb-4">Blog Posts</h2>
       <div className="grid md:grid-cols-2 gap-4">
         {posts.map((post: Post) => (
-          <Link href={`/blog/${post.slug}`} >
-          <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-            <img src={post.featureImage?.sizes?.thumbnail?.url || '/default-thumbnail.png'} alt={post.featureImage?.alt || 'Default Image'} className="w-full h-auto" />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold">{post.title}</h3>
-              <p className="mt-2">{post.summary}</p>
+          <Link key={post.id} href={`/blog/${post.slug}`}>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <img src={post.featureImage?.sizes?.thumbnail?.url || '/default-thumbnail.png'} alt={post.featureImage?.alt || 'Default Image'} className="w-full h-auto" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold">{post.title}</h3>
+                <p className="mt-2">{post.summary}</p>
+              </div>
             </div>
-          </div>
           </Link>
         ))}
       </div>

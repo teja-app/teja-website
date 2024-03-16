@@ -4,6 +4,7 @@ import { bodyCss, headingFontCss, titleFontCss } from '@/components/css/fonts';
 import FeaturesSection from '@/components/ui/FeaturesSection';
 import Footer from '@/components/ui/FooterSection';
 import HeroSection from '@/components/ui/HeroSection';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Teja: a companion for emotional balance, mental wellness, and social connection',
@@ -23,9 +24,8 @@ export default function Home() {
             <Image src={"/logo/color_horizontal.svg"} alt="Teja Logo" width={150} height={50} />
             {/* Navigation Links */}
             <div className={`hidden md:flex space-x-4 ${bodyCss.className}`} >
-              <a href="/blog" className="font-semibold">Blog</a>
-              <a href="/about" className="font-semibold">About Us</a>
-              <a href="#" className="font-semibold">Help</a>
+              <Link href="/blog/" className="font-semibold">Blog</Link>
+              <Link href="/about/" className="font-semibold">About Us</Link>
             </div>
           </nav>
           <HeroSection />
