@@ -14,7 +14,7 @@ export async function fetchBlogPost(slug: String) {
 
 
 const BlogPost = ({ post }: any) => {
-  const socialImageUrl = post.meta.image.sizes.tablet.url;
+  const socialImageUrl = post.meta.image.sizes.thumbnail.url;
   const postUrl = `https://teja.app/blog/${post.slug}`;
 
   return (
