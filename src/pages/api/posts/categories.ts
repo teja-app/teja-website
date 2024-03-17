@@ -13,6 +13,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     res.status(200).json(data);
   } catch (e) {
-    res.status(500).json({ error: "Unable to connect to database: " + e.message });
+    res.status(500).json({ error: "Unable to connect to database: " + (e as any).message });
   }
 }
