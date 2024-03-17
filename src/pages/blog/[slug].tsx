@@ -3,23 +3,12 @@ import Head from 'next/head';
 import { GetServerSideProps } from 'next';
 import { Serialize } from '@/components/serialize';
 import './serialize.css';
-
-export async function fetchBlogPost(slug: String) {
-  // const response = await fetch(`https://payload-gjbfgxwajq-el.a.run.app/api/posts/slug/}`);
-
-  const response = await fetch(`http://localhost:3000/api/posts/${slug}`);
-  if (!response.ok) {
-    throw new Error('Blog post not found');
-  }
-  return response.json();
-}
-
+import { getPostBySlugApi } from '../api/posts/[slug]';
 
 const BlogPost = ({ post }: any) => {
   const socialImageUrl = "https://f000.backblazeb2.com/file/swayam-dev-master/" + post?.featureImage?.sizes?.thumbnail?.filename;
   const featureImage = "https://f000.backblazeb2.com/file/swayam-dev-master/" + post?.featureImage?.sizes?.tablet?.filename;
   const postUrl = `https://teja.app/blog/${post.slug}`;
-
   return (
     <article className="mx-auto max-w-5xl prose lg:prose-xl mx-auto px-4 md:px-6 lg:px-8 p-8">
        <Head>
@@ -60,7 +49,8 @@ const BlogPost = ({ post }: any) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ params }: any) => {
-  const post = await fetchBlogPost(params.slug);
+  const postsRes = await getPostBySlugApi(params.slug);
+  const post =  JSON.parse(JSON.stringify(postsRes)) as any;
   return {
     props: { post },
   };

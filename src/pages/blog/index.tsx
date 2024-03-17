@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Link from 'next/link';
+import { getPostApi } from '../api/posts';
+import { getPostCategryApi } from '../api/posts/categories';
 
 interface Post {
 id: string;
@@ -19,18 +21,10 @@ slug: string;
   
   
 export const getServerSideProps: GetServerSideProps = async () => {
-    const postsRes = await fetch('http://localhost:3000/api/posts/');
-    const categoriesRes = await fetch('http://localhost:3000/api/posts/categories/');
-    if (!postsRes.ok) {
-      throw new Error(`Failed to fetch posts, status: ${postsRes.status}`);
-    }
-    if (!categoriesRes.ok) {
-        throw new Error(`Failed to fetch categories, status: ${categoriesRes.status}`);
-    }
-  
-    const postsData: Post[]  = await postsRes.json();
-    const categoriesData: Category[]  = await categoriesRes.json();
-    // Now, you can correctly type the data being passed to your component
+    const postsRes = await getPostApi();
+    const categoriesRes = await getPostCategryApi();
+    const postsData: Post[]  =  JSON.parse(JSON.stringify(postsRes)) as any;
+    const categoriesData: Category[]  = JSON.parse(JSON.stringify(categoriesRes)) as any;
     const posts: Post[] = postsData;
     const categories: Category[] = categoriesData;
     
