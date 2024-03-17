@@ -5,7 +5,9 @@ import { Serialize } from '@/components/serialize';
 import './serialize.css';
 
 export async function fetchBlogPost(slug: String) {
-  const response = await fetch(`https://payload-gjbfgxwajq-el.a.run.app/api/posts/slug/${slug}`);
+  // const response = await fetch(`https://payload-gjbfgxwajq-el.a.run.app/api/posts/slug/}`);
+
+  const response = await fetch(`http://localhost:3000/api/posts/${slug}`);
   if (!response.ok) {
     throw new Error('Blog post not found');
   }
@@ -14,7 +16,8 @@ export async function fetchBlogPost(slug: String) {
 
 
 const BlogPost = ({ post }: any) => {
-  const socialImageUrl = post.meta.image.sizes.thumbnail.url;
+  const socialImageUrl = "https://f000.backblazeb2.com/file/swayam-dev-master/" + post?.featureImage?.sizes?.thumbnail?.filename;
+  const featureImage = "https://f000.backblazeb2.com/file/swayam-dev-master/" + post?.featureImage?.sizes?.tablet?.filename;
   const postUrl = `https://teja.app/blog/${post.slug}`;
 
   return (
@@ -42,7 +45,7 @@ const BlogPost = ({ post }: any) => {
       <h1 className="text-2xl font-bold mb-4">{post.title}</h1>
       <div className="flex justify-center p-8">
         <img
-          src={post.featureImage.sizes.tablet.url}
+          src={featureImage}
           alt={post.featureImage.alt}
           className="w-full sm:w-3/4 md:w-1/2 lg:w-1/2 xl:w-1/2 mx-auto"
         />
