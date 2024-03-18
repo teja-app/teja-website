@@ -14,6 +14,7 @@ slug: string;
 }
 
 interface Category {
+_id: any;
 id: string;
 name: string;
 slug: string;
@@ -21,7 +22,7 @@ slug: string;
   
   
 export const getServerSideProps: GetServerSideProps = async () => {
-    const postsRes = await getPostApi();
+    const postsRes = await getPostApi({});
     const categoriesRes = await getPostCategryApi();
     const postsData: Post[]  =  JSON.parse(JSON.stringify(postsRes)) as any;
     const categoriesData: Category[]  = JSON.parse(JSON.stringify(categoriesRes)) as any;
@@ -60,9 +61,11 @@ export default function BlogPage({ posts, categories }: InferGetServerSidePropsT
       <h2 className="text-2xl font-bold mt-8 mb-4">Categories</h2>
       <ul className="flex flex-wrap gap-2">
         {categories.map((category: Category) => (
-          <li key={category.id} className="bg-gray-200 rounded-full px-4 py-1">
-            {category.name}
-          </li>
+          <Link key={category.id} href={`/blog/categories/${category._id}`}>
+            <li className="bg-gray-200 rounded-full px-4 py-1">
+              {category.name}
+            </li>
+          </Link>
         ))}
       </ul>
     </div>

@@ -1,6 +1,6 @@
 // pages/api/data.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
-import clientPromise from '../../../lib/mongodb';
+import clientPromise from '../../../../lib/mongodb';
 
 export async function getPostCategryApi() {
   const client = await clientPromise;
