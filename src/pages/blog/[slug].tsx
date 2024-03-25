@@ -6,6 +6,7 @@ import './serialize.css';
 import { getPostBySlugApi } from '../api/posts/[slug]';
 import { getPostCategoryByIdApi } from '../api/posts/categories/[id]';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 interface Category {
@@ -62,10 +63,12 @@ const BlogPost = ({ post, postCategory }: any) => {
 
       <h1 className="text-2xl font-bold mb-4">{post.title}</h1>
       <div className="flex justify-center p-8">
-        <img
+        <Image
           src={featureImage}
           alt={post.featureImage.alt}
-          className="w-full sm:w-3/4 md:w-1/2 lg:w-1/2 xl:w-1/2 mx-auto"
+          width={400} // Specify the width of the image (example value)
+          height={400} // Specify the height of the image (example value)
+          objectFit="cover" // Adjust how the image fits into its container
         />
       </div>
       <p className="">{post.summary}</p>
