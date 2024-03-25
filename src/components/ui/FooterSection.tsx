@@ -22,7 +22,7 @@ export default function Footer() {
                 <ul>
                   <li className="mb-2"><a href="/about" className="hover:underline">About Us</a></li>
                   <li className="mb-2"><a href="/download" className="hover:underline">Download</a></li>
-                  <li className="mb-2"><a href="https://blog.teja.app" className="hover:underline">Blog</a></li>
+                  <li className="mb-2"><a href="/blog" className="hover:underline">Blog</a></li>
                   <li><a href="/terms" className="hover:underline">Terms & Conditions</a></li>
                   <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
                 </ul>
