@@ -10,7 +10,7 @@ export default function HeroSection() {
         {/* Hero image */}
         {/* Adjust width and height as needed, this is just an example */}
         <img 
-          src="/heroImage.png" 
+          src="/heroImage.webp" 
           alt="Hero" 
           className="relative lg:absolute lg:inset-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2" 
           style={{ maxHeight: '728px' }} // Override the max-height inline for greater specificity
