@@ -4,6 +4,7 @@ import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Link from 'next/link';
 import { getPostApi } from '../api/posts';
 import { getPostCategryApi } from '../api/posts/categories';
+import Image from 'next/image';
 
 interface Post {
 id: string;
@@ -48,7 +49,14 @@ export default function BlogPage({ posts, categories }: InferGetServerSidePropsT
           return (
           <Link key={post.id} href={`/blog/${post.slug}`}>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src={featureImage || '/default-thumbnail.png'} alt={post.featureImage?.alt || 'Default Image'} className="w-full h-auto" />
+              <Image
+                className="w-full"
+                src={featureImage}
+                alt={post.featureImage.alt}
+                width={400} // Specify the width of the image (example value)
+                height={300} // Specify the height of the image (example value)
+                objectFit="cover" // Adjust how the image fits into its container
+              />
               <div className="p-6">
                 <h3 className="text-xl font-semibold">{post.title}</h3>
                 <p className="mt-2">{post.summary}</p>
