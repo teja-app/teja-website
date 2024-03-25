@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getPostApi } from '@/pages/api/posts';
 import { getPostCategryApi } from '@/pages/api/posts/categories';
 import { getPostCategoryByIdApi } from '@/pages/api/posts/categories/[id]';
+import Image from 'next/image';
 
 interface Post {
   id: string;
@@ -99,15 +100,23 @@ export default function BlogPage({ posts, categories, presentCategory }: InferGe
           const featureImage = "https://f000.backblazeb2.com/file/swayam-dev-master/" + post?.featureImage?.sizes?.thumbnail?.filename;
           return (
             <Link key={post.id} href={`/blog/${post.slug}`}>
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src={featureImage || '/default-thumbnail.png'} alt={post.featureImage?.alt || 'Default Image'} className="w-full h-auto" />
+              <a className="bg-white rounded-lg shadow-md overflow-hidden block">
+                {post?.featureImage?.sizes?.thumbnail && (
+                  <Image
+                    src={featureImage}
+                    alt={post.featureImage.alt}
+                    width={post.featureImage.sizes.thumbnail.width} 
+                    height={post.featureImage.sizes.thumbnail.height} 
+                    objectFit="cover"
+                  />
+                )}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold">{post.title}</h3>
-                  <p className="mt-2">{post.summary}</p>
+                  <h3 className="text-xl font-semibold">{post?.title}</h3>
+                  <p className="mt-2">{post?.summary}</p>
                 </div>
-              </div>
+              </a>
             </Link>
-          )
+          );
         }
         )}
       </div>

@@ -63,7 +63,7 @@ export default function BlogPage({ posts, categories }: InferGetServerSidePropsT
           return (
             <Link key={post.id} href={`/blog/${post.slug}`}>
               <a className="bg-white rounded-lg shadow-md overflow-hidden block">
-                {post.featureImage.sizes.thumbnail && (
+                {post?.featureImage?.sizes?.thumbnail && (
                   <Image
                     src={featureImage}
                     alt={post.featureImage.alt}
