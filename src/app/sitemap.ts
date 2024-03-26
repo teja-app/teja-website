@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://teja.app',
+      url: 'https://teja.app/',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
