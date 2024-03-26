@@ -21,10 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      
+    <Script defer src="https://app.tinyanalytics.io/pixel/qsIk6nWpfQWKHXZg" />
     <Head>
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <Script defer src="https://app.tinyanalytics.io/pixel/qsIk6nWpfQWKHXZg" />
     </Head>
       <body className={lato.className}>
         {children}
