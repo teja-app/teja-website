@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Lato } from 'next/font/google'
 import './globals.css'
 import Head from 'next/head'
@@ -23,6 +24,7 @@ export default function RootLayout({
       
     <Head>
     <link rel="icon" href="/favicon.ico" sizes="any" />
+    <Script defer src="https://app.tinyanalytics.io/pixel/qsIk6nWpfQWKHXZg" />
     </Head>
       <body className={lato.className}>
         {children}
