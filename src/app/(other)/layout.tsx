@@ -4,6 +4,7 @@ import { Lato } from 'next/font/google';
 import Head from 'next/head';
 import { bodyCss } from '@/components/css/fonts';
 import Footer from '@/components/ui/FooterSection';
+import Link from 'next/link';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -27,11 +28,11 @@ export default function RootLayout({
     </Head>
       <body className={`bg-white text-black  ${lato.className}`}>
         <nav className="bg-white text-black flex justify-between items-center p-4">
-        <a href="/" className=" font-semibold"> <Image src={"/logo/color_horizontal.svg"} alt="Teja Logo" width={150} height={50} /> </a>
+        <Link href="/" className=" font-semibold"> <Image src={"/logo/color_horizontal.svg"} alt="Teja Logo" width={150} height={50} /> </a>
           {/* Navigation Links */}
-          <div className={`hidden md:flex space-x-4 ${bodyCss.className}`} >
-            <a href="/about" className=" font-semibold">About Us</a>
-            <a href="#" className=" font-semibold">Help</a>
+          <div className={`space-x-4 ${bodyCss.className}`} >
+            <Link href="/about" className=" font-semibold">About Us</Link>
+            <Link href="#" className=" font-semibold">Help</Link>
           </div>
         </nav>
         {children}

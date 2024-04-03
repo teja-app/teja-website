@@ -99,8 +99,7 @@ export default function BlogPage({ posts, categories, presentCategory }: InferGe
         {posts.map((post: Post) => {
           const featureImage = "https://f000.backblazeb2.com/file/swayam-dev-master/" + post?.featureImage?.sizes?.thumbnail?.filename;
           return (
-            <Link key={post.id} href={`/blog/${post.slug}`}>
-              <a className="bg-white rounded-lg shadow-md overflow-hidden block">
+            <Link key={post.id} href={`/blog/${post.slug}`} className="bg-white rounded-lg shadow-md overflow-hidden block">
                 {post?.featureImage?.sizes?.thumbnail && (
                   <Image
                     src={featureImage}
@@ -114,7 +113,6 @@ export default function BlogPage({ posts, categories, presentCategory }: InferGe
                   <h3 className="text-xl font-semibold">{post?.title}</h3>
                   <p className="mt-2">{post?.summary}</p>
                 </div>
-              </a>
             </Link>
           );
         }

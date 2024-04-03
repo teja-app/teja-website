@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const featuresList = ['Mood Tracking', 'Guided Journal', 'Habit Formation', 'Personal Analysis'];
 export default function FeaturesSection() {
     return (
@@ -31,9 +33,9 @@ export default function FeaturesSection() {
                     </p>
 
                     <div className="text-center">
-                        <a href="https://testflight.apple.com/join/w2vMOLFB" className="bg-black text-white font-semibold text-lg py-4 px-16 rounded-full hover:bg-white hover:text-black transition-colors shadow-lg">
-                        Download Beta<br />
-                        </a>
+                        <Link href="https://apps.apple.com/us/app/teja-journal-selfcare/id6473733799" className="bg-black text-white font-semibold text-lg py-4 px-16 rounded-full hover:bg-white hover:text-black transition-colors shadow-lg">
+                        Download<br />
+                        </Link>
                     </div>
                     <div className="mb-20"></div>
                     <div className="mb-20"></div>

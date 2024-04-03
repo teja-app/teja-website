@@ -22,7 +22,7 @@ export default function Footer() {
                 <h6 className="font-semibold mb-3">Company</h6>
                 <ul>
                   <li className="mb-2"><Link href="/about" className="hover:underline">About Us</Link></li>
-                  <li className="mb-2"><Link href="/download" className="hover:underline">Download</Link></li>
+                  <li className="mb-2"><Link href="https://apps.apple.com/us/app/teja-journal-selfcare/id6473733799" className="hover:underline">Download</Link></li>
                   <li className="mb-2"><Link href="/blog" className="hover:underline">Blog</Link></li>
                   <li><Link href="/terms" className="hover:underline">Terms & Conditions</Link></li>
                   <li><Link href="/privacy" className="hover:underline">Privacy Policy</Link></li>

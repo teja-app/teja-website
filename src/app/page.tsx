@@ -5,6 +5,7 @@ import FeaturesSection from '@/components/ui/FeaturesSection';
 import Footer from '@/components/ui/FooterSection';
 import HeroSection from '@/components/ui/HeroSection';
 import Link from 'next/link';
+import PrivacySection from '@/components/ui/PrivacySection';
 
 export const metadata = {
   title: 'Teja: a companion for emotional balance, mental wellness, and social connection',
@@ -23,7 +24,7 @@ export default function Home() {
           <nav className="flex justify-between items-center p-4">
             <Image src={"/logo/color_horizontal.svg"} alt="Teja Logo" width={150} height={50} />
             {/* Navigation Links */}
-            <div className={`hidden md:flex space-x-4 ${bodyCss.className}`} >
+            <div className={`space-x-4 ${bodyCss.className}`} >
               <Link href="/blog/" className="font-semibold">Blog</Link>
               <Link href="/about/" className="font-semibold">About Us</Link>
             </div>
@@ -33,6 +34,9 @@ export default function Home() {
       </div>
       <div className="relative bg-white text-black">
         <WhyTejaSection />
+      </div>
+      <div className="relative bg-white text-black">
+        <PrivacySection />
       </div>
       <div className="relative bg-white text-black">
         <FeaturesSection />

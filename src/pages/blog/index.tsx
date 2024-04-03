@@ -61,8 +61,7 @@ export default function BlogPage({ posts, categories }: InferGetServerSidePropsT
           // Use optional chaining to safely access nested properties
           const featureImage = post.featureImage.sizes.thumbnail ? `https://f000.backblazeb2.com/file/swayam-dev-master/${post.featureImage.sizes.thumbnail.filename}` : '/default-thumbnail.jpg'; // Provide a default thumbnail URL as fallback
           return (
-            <Link key={post.id} href={`/blog/${post.slug}`}>
-              <a className="bg-white rounded-lg shadow-md overflow-hidden block">
+            <Link key={post.id} href={`/blog/${post.slug}`}  className="bg-white rounded-lg shadow-md overflow-hidden block">
                 {post?.featureImage?.sizes?.thumbnail && (
                   <Image
                     src={featureImage}
@@ -76,7 +75,6 @@ export default function BlogPage({ posts, categories }: InferGetServerSidePropsT
                   <h3 className="text-xl font-semibold">{post?.title}</h3>
                   <p className="mt-2">{post?.summary}</p>
                 </div>
-              </a>
             </Link>
           );
         })}
@@ -84,8 +82,8 @@ export default function BlogPage({ posts, categories }: InferGetServerSidePropsT
       <h2 className="text-2xl font-bold mt-8 mb-4">Categories</h2>
       <ul className="flex flex-wrap gap-2">
         {categories.map((category: Category) => (
-          <Link key={category._id} href={`/blog/categories/${category._id}`}>
-            <a className="bg-gray-200 rounded-full px-4 py-1 block">{category?.name}</a>
+          <Link key={category._id} href={`/blog/categories/${category._id}`} className="bg-gray-200 rounded-full px-4 py-1 block">
+            {category?.name}
           </Link>
         ))}
       </ul>
