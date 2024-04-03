@@ -28,7 +28,7 @@ export default function RootLayout({
     </Head>
       <body className={`bg-white text-black  ${lato.className}`}>
         <nav className="bg-white text-black flex justify-between items-center p-4">
-        <Link href="/" className=" font-semibold"> <Image src={"/logo/color_horizontal.svg"} alt="Teja Logo" width={150} height={50} /> </a>
+        <Link href="/" className=" font-semibold"> <Image src={"/logo/color_horizontal.svg"} alt="Teja Logo" width={150} height={50} /> </Link>
           {/* Navigation Links */}
           <div className={`space-x-4 ${bodyCss.className}`} >
             <Link href="/about" className=" font-semibold">About Us</Link>
