@@ -11,9 +11,6 @@ export default function HeroSection() {
         <p className="text-lg lg:text-xl text-[#1f6079] mb-8">
           Revolutionizing Mental Wellness
         </p>
-        <p className="text-lg lg:text-xl text-[#1f6079] mb-8">
-          A New Approach to Brain Health
-        </p>
         <Link
           href="https://apps.apple.com/us/app/teja-journal-selfcare/id6473733799"
           className="bg-black text-white font-semibold text-lg py-3 lg:py-4 px-10 lg:px-16 rounded-full hover:bg-white hover:text-black transition-colors shadow-lg"
