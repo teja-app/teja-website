@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'f000.backblazeb2.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.leonardo.ai',
+      },
     ],
   },
     pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],

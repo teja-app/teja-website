@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen text-center">
+    <div className="flex flex-col lg:flex-row text-center">
       <div className="lg:w-4/6 w-full flex flex-col justify-center">
         <h1 className="text-4xl text-[#1f6079] font-bold mb-4">
           Journaling for daily peace and drive.
@@ -21,13 +21,13 @@ export default function HeroSection() {
           Download<br />
         </Link>
         <span className="text-xs lg:text-sm mt-1">
-          It's free, secure, data on device and no login required.
+          It's free, secure, anonymous and no login required.
         </span>
       </div>
       {/* Left column for the background pattern and hero image */}
       <div className="lg:w-2/6 w-full relative">
         {/* Background pattern */}
-        <img src="/heroPattern.svg" alt="Background pattern" className="absolute inset-0 w-full h-full object-cover" />
+        <Image src="/womenJournalingTeja.jpg" width={450} height={450} alt={"Women with a journal"} />
       </div>
 
 

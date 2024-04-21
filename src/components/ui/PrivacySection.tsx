@@ -11,8 +11,11 @@ export default function WhyTejaSection() {
                     <p className={`text-lg md:text-xl ${bodyCss.className}`}>"Protecting your privacy is more than a duty for us; it's an essential component of our mission."</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 flex flex-wrap justify-center gap-10 md:gap-20 mb-20">
-                    <div className="flex flex-col items-center max-w-md mx-auto">
-                        <Image src={"/privacy_puppy.webp"} alt="Teja Logo" width={400} height={400} layout="responsive" />
+                    <div className="flex rounded-xl flex-col items-center max-w-md mx-auto">
+                        <Image src={"/privacyPuppy.webp"}
+                         alt="Teja Logo" width={300} height={300} layout="responsive" 
+                         className='rounded-xl'
+                        />
                     </div>
                     <div className="flex flex-col items-center max-w-md mx-auto">
                         <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
