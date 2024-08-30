@@ -2,8 +2,8 @@ import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { headingFontCss, titleFontCss } from "@/components/css/fonts";
-import { comparisonData, ComparisonData } from "./journalAppComparison";
-import { getComparisonDescription } from "./getComparisonDescription";
+import { comparisonData, ComparisonData } from "@/data/journalAppComparison";
+import { getComparisonDescription } from "@/data/getComparisonDescription";
 
 const ComparisonPage = () => {
   const router = useRouter();
